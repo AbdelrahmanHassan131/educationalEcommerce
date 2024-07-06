@@ -1,5 +1,4 @@
-﻿using educationalEcommerce.Server.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace educationalEcommerce.Server.Infrastructure
 {
@@ -18,8 +17,6 @@ namespace educationalEcommerce.Server.Infrastructure
             optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DatabaseConnection"));
 
         }
-
-        public DbSet<TryEntity> TryEntities { get; set; }
     }
 
 }
