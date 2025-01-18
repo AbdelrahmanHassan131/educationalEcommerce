@@ -1,4 +1,5 @@
 ﻿using educationalEcommerce.Server.Domain.Entities;
+using educationalEcommerce.Server.Domain.TryEntities;
 using Microsoft.EntityFrameworkCore;
 
 namespace educationalEcommerce.Server.Infrastructure
@@ -22,6 +23,15 @@ namespace educationalEcommerce.Server.Infrastructure
         public DbSet<User> Users { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Item> Items { get; set; }
+
+
+        public DbSet<MainMod> MainMods { get; set; }
+        public DbSet<ModAlt> ModAlts { get; set; }
+        public DbSet<ModIncDec> ModIncDecs { get; set; }
+        public DbSet<ModIncDecItem> ModIncDecItems { get; set; }
+        public DbSet<ModAltItem> ModAltItems { get; set; }
+
+
     }
 
 }

@@ -1,3 +1,8 @@
+using AutoMapper;
+using educationalEcommerce.Server.Infrastructure;
+using educationalEcommerce.Server.Profiles;
+using educationalEcommerce.Server.Profiles.Dto.TryDto;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddDbContext<EduCommDbContext>();
 
 var app = builder.Build();
 
